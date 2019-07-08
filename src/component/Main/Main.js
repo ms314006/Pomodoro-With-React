@@ -1,25 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Information from './Information';
+import TimeController from './TimeController';
+import Menu from './Menu';
 import styles from './index.scss';
 
 const Main = (props) => {
-  const { title, } = props;
+  const { } = props;
   return (
-    <h1
-      className={styles.title}
-      data-testid="title"
+    <div
+      className={styles.main_block}
+      data-testid="main_block"
     >
-      {title}
-    </h1>
+      <Information />
+      <TimeController />
+      <Menu />
+    </div>
   );
-};
-
-Main.propTypes = {
-  title: PropTypes.string,
-};
-
-Main.defaultProps = {
-  title: 'default',
 };
 
 export default Main;
