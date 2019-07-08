@@ -1,3 +1,22 @@
 .information_block {
-    
+    padding: 48px 26px 48px 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .current_todo_block {
+        display: flex;
+        font-size: 48px;
+        color: #003164;
+    }
+
+    .todo_information_block {
+        font-family: 'Roboto', serif;
+        font-weight: bold;
+        margin-left:16px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        font-size: 24px;
+    }
 }
