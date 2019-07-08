@@ -1,0 +1,48 @@
+.timeController_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #003164 50%, #FFEDF7 50%);
+}
+
+circle {
+    border: 4px solid #FF4384;
+    border-radius: 50%;
+}
+
+.outside_border_circle {
+    @extend circle;
+    position:absolute;
+    height: 540px;
+    width: 540px;
+}
+
+.inside_fill_circle {
+    @extend circle;
+    position:absolute;
+    background-color: #FF4384;
+    height: 500px;
+    width: 500px;
+}
+
+.controller_button_block {
+    position: absolute;
+    display: flex;
+    flex-wrap: row;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.start_button {
+    @extend circle;
+    color: #FF4384;
+    font-size: 84px;
+    height: 96px;
+    width: 96px;
+}
+
+.end_button {
+    height: 12px;
+    width: 12px;
+    border: none;
+}
