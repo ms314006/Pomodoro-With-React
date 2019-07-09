@@ -1,0 +1,24 @@
+add_todo_block {
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF4384;
+}
+
+.add_todo_input_block {
+    @extend add_todo_block;
+}
+
+.add_todo_input {
+    @extend add_todo_block;
+    padding: 16px;
+    font-style: italic;
+    border: none;
+    background-color: #ffffff;
+    height: 56px;
+    width: 445px;
+}
+
+.add_todo_icon {
+    margin-left: -30px;
+}
