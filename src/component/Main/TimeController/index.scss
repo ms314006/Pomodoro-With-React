@@ -10,21 +10,6 @@ circle {
     border-radius: 50%;
 }
 
-.outside_border_circle {
-    @extend circle;
-    position:absolute;
-    height: 540px;
-    width: 540px;
-}
-
-.inside_fill_circle {
-    @extend circle;
-    position:absolute;
-    background-color: #FF4384;
-    height: 500px;
-    width: 500px;
-}
-
 .controller_button_block {
     position: absolute;
     display: flex;
@@ -34,10 +19,9 @@ circle {
 }
 
 .start_button {
-    @extend circle;
-    color: #FF4384;
+    color: #ffffff;
     font-size: 84px;
-    height: 96px;
+    height: 80px;
     width: 96px;
 }
 

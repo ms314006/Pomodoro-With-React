@@ -1,4 +1,5 @@
 import React from 'react';
+import Circle from '../../Circle';
 import styles from './index.scss';
 
 const TimeController = (props) => {
@@ -8,16 +9,22 @@ const TimeController = (props) => {
       className={styles.timeController_block}
       data-testid="timeController_block"
     >
-      <div className={styles.outside_border_circle} />
-      <div className={styles.inside_fill_circle} />
+      <Circle style={{
+        border: '4px solid #FF4384',
+        position: 'absolute',
+        height: '540px',
+        width: '540px',
+      }}
+      />
+      <Circle style={{
+        backgroundColor: '#FF4384',
+        position: 'absolute',
+        height: '500px',
+        width: '500px',
+      }}
+      />
       <div className={styles.controller_button_block}>
-        <button
-          type="button"
-          className={styles.start_button}
-          data-testid="start_button"
-        >
-          <i className="fas fa-caret-right" style={{ width: '85px', }} />
-        </button>
+        <i className={`fas fa-play-circle ${styles.start_button}`} />
         <button
           type="button"
           className={styles.end_button}
