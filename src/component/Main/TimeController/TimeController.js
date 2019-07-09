@@ -24,7 +24,10 @@ const TimeController = (props) => {
       }}
       />
       <div className={styles.controller_button_block}>
-        <i className={`fas fa-play-circle ${styles.start_button}`} />
+        <i
+          className={`fas fa-play-circle ${styles.start_button}`}
+          data-testid="start_button"
+        />
         <button
           type="button"
           className={styles.end_button}
