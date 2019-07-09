@@ -14,8 +14,16 @@ const initState = {
 
 const todolist = (state = initState, action) => {
 
-  const getTargetIndex = () => {
-    state.todoList.findIndex(todo => todo.id === action.payload.id);
+  const getTargetIndex = () => state.todoList.findIndex(todo => todo.id === action.payload.id);
+  const cloneArray = array => array.map(item => item);
+  const updateTodoStatus = (value) => {
+    const todoList = cloneArray(state.todoList);
+    const targetTodo = todoList[getTargetIndex()];
+    todoList.splice(getTargetIndex(), 1, {
+      ...targetTodo,
+      ...value,
+    });
+    return todoList;
   };
 
   switch (action.type) {
@@ -32,18 +40,19 @@ const todolist = (state = initState, action) => {
         ],
       };
     case ADD_SPEND_SECONDS:
-      state.todoList.splice(getTargetIndex(), 1, {
-        ...state.todoList[getTargetIndex()],
-        spendSeconds: state.todoList[getTargetIndex()].spendSeconds + 1,
-      });
-      return { ...state, };
-    case CHECK_TODO: {
-      state.todoList.splice(getTargetIndex(), 1, {
-        ...state.todoList[getTargetIndex()],
-        completed: action.payload.completed,
-      });
-      return { ...state, };
-    }
+      return {
+        ...state,
+        todoList: [
+          ...updateTodoStatus({ spendSeconds: state.todoList[getTargetIndex()].spendSeconds + 1, })
+        ],
+      };
+    case CHECK_TODO:
+      return {
+        ...state,
+        todoList: [
+          ...updateTodoStatus({ completed: action.payload.completed, })
+        ],
+      };
     default:
       return state;
   }
