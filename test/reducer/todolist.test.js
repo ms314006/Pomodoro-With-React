@@ -15,6 +15,7 @@ const initialState = {
 };
 
 describe('test reducer', () => {
+
   test('Test initial state', () => {
     expect(reducer(undefined, {})).toEqual(initialState);
   });
@@ -53,5 +54,19 @@ describe('test reducer', () => {
       ],
     });
   });
-  
+
+  test('Test check todo completed to true', () => {
+    expect(reducer(initialState, actions.checkTodo({ id: 0, completed: true, }))).toEqual({
+      ...initialState,
+      todoList: [
+        {
+          id: 0,
+          name: 'TodoList 1',
+          completed: true,
+          spendSeconds: 0,
+        }
+      ],
+    });
+  });
+
 });
