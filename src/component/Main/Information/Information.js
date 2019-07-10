@@ -2,6 +2,7 @@ import React from 'react';
 import AddTodoInput from '../../AddTodoInput';
 import Time from '../../Time';
 import Circle from '../../Circle';
+import TodoList from '../../TodoList';
 import styles from './index.scss';
 
 const Information = () => (
@@ -29,6 +30,7 @@ const Information = () => (
       </div>
       <Time />
     </div>
+    <TodoList />
   </div>
 );
 
