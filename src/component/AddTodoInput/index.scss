@@ -7,6 +7,18 @@ add_todo_block {
 
 .add_todo_input_block {
     @extend add_todo_block;
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: #FF4384;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #FF4384;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #FF4384;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #FF4384;
+    }
 }
 
 .add_todo_input {
