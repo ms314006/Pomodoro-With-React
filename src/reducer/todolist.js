@@ -2,6 +2,7 @@ import { ADD_TODO, ADD_SPEND_SECONDS, CHECK_TODO } from '../actions/todolist';
 
 const initState = {
   currentId: 0,
+  currentTodo: 0,
   todoList: [
     {
       id: 0,
