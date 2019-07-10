@@ -19,7 +19,7 @@ describe('test actions', () => {
       },
     };
 
-    expect(actions.addTodoList(todo)).toEqual(expectAction);
+    expect(actions.addTodo(todo)).toEqual(expectAction);
   });
 
   test('Add spend seconds', () => {
