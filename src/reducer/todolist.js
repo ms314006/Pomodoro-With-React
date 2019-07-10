@@ -13,7 +13,6 @@ const initState = {
 };
 
 const todolist = (state = initState, action) => {
-
   const getTargetIndex = () => state.todoList.findIndex(todo => todo.id === action.payload.id);
   const cloneArray = array => array.map(item => item);
   const updateTodoStatus = (value) => {
@@ -35,7 +34,9 @@ const todolist = (state = initState, action) => {
           ...state.todoList,
           {
             id: state.currentId + 1,
-            ...action.payload.todo,
+            name: action.payload.todo.name,
+            completed: false,
+            spendSeconds: 0,
           }
         ],
       };
