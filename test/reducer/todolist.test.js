@@ -4,6 +4,7 @@ import * as actions from '../../src/actions/todolist.js';
 // 初始 state
 const initialState = {
   currentId: 0,
+  currentTodo: 0,
   todoList: [
     {
       id: 0,
@@ -23,10 +24,8 @@ describe('test reducer', () => {
   test('Test add todo', () => {
     const newTodoData = {
       name: 'TodoList 2',
-      completed: false,
-      spendSeconds: 0,
     };
-    expect(reducer(initialState, actions.addTodoList(newTodoData))).toEqual({
+    expect(reducer(initialState, actions.addTodo(newTodoData))).toEqual({
       ...initialState,
       currentId: 1,
       todoList: [
