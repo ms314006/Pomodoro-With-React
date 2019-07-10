@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.scss';
 
 const Circle = (props) => {
@@ -10,6 +11,14 @@ const Circle = (props) => {
       data-testid="circle_block"
     />
   );
+};
+
+Circle.propTypes = {
+  style: PropTypes.shape({}),
+};
+
+Circle.defaultProps = {
+  style: {},
 };
 
 export default Circle;
