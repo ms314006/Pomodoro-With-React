@@ -38,11 +38,12 @@ AddTodoInput.propTypes = {
 };
 
 AddTodoInput.defaultProps = {
-  addTodo: () => {},
+  addTodo: () => { },
 };
 
 const mapStateToDispatch = dispatch => ({
   addTodo: (name) => { dispatch(addTodo({ name, })); },
 });
 
+export { AddTodoInput as TestAddTodoInput };
 export default connect(null, mapStateToDispatch)(AddTodoInput);
