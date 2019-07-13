@@ -1,8 +1,8 @@
 import { ADD_TODO, ADD_SPEND_SECONDS, CHECK_TODO } from '../actions/todolist';
 
-const initState = {
-  currentId: 0,
-  currentTodo: 0,
+export const initState = {
+  lastNewTodoId: 4,
+  currentExecuteTodo: 0,
   todoList: [
     {
       id: 0,
@@ -54,11 +54,11 @@ const todolist = (state = initState, action) => {
     case ADD_TODO:
       return {
         ...state,
-        currentId: state.currentId + 1,
+        lastNewTodoId: state.lastNewTodoId + 1,
         todoList: [
           ...state.todoList,
           {
-            id: state.currentId + 1,
+            id: state.lastNewTodoId + 1,
             name: action.payload.todo.name,
             completed: false,
             spendSeconds: 0,

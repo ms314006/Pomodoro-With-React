@@ -1,38 +1,24 @@
-import reducer from '../../src/reducer/todolist.js';
+import reducer, { initState } from '../../src/reducer/todolist.js';
 import * as actions from '../../src/actions/todolist.js';
-
-// 初始 state
-const initialState = {
-  currentId: 0,
-  currentTodo: 0,
-  todoList: [
-    {
-      id: 0,
-      name: 'TodoList 1',
-      completed: false,
-      spendSeconds: 0,
-    }
-  ],
-};
 
 describe('test reducer', () => {
 
   test('Test initial state', () => {
-    expect(reducer(initialState, {})).toEqual(initialState);
+    expect(reducer(initState, {})).toEqual(initState);
   });
 
   test('Test add todo', () => {
     const newTodoData = {
-      name: 'TodoList 2',
+      name: 'TodoList 6',
     };
-    expect(reducer(initialState, actions.addTodo(newTodoData))).toEqual({
-      ...initialState,
-      currentId: 1,
+    expect(reducer(initState, actions.addTodo(newTodoData))).toEqual({
+      ...initState,
+      lastNewTodoId: 5,
       todoList: [
-        ...initialState.todoList,
+        ...initState.todoList,
         {
-          id: 1,
-          name: 'TodoList 2',
+          id: 5,
+          name: 'TodoList 6',
           completed: false,
           spendSeconds: 0,
         }
@@ -41,31 +27,15 @@ describe('test reducer', () => {
   });
 
   test('Test add spend seconds', () => {
-    expect(reducer(initialState, actions.addSpendSeconds(0))).toEqual({
-      ...initialState,
-      todoList: [
-        {
-          id: 0,
-          name: 'TodoList 1',
-          completed: false,
-          spendSeconds: 1,
-        }
-      ],
-    });
+    const expectObject = JSON.parse(JSON.stringify(initState));
+    expectObject.todoList[0].spendSeconds += 1;
+    expect(reducer(initState, actions.addSpendSeconds(0))).toEqual(expectObject);
   });
 
   test('Test check todo completed to true', () => {
-    expect(reducer(initialState, actions.checkTodo({ id: 0, completed: true, }))).toEqual({
-      ...initialState,
-      todoList: [
-        {
-          id: 0,
-          name: 'TodoList 1',
-          completed: true,
-          spendSeconds: 0,
-        }
-      ],
-    });
+    const expectObject = JSON.parse(JSON.stringify(initState));
+    expectObject.todoList[0].completed = true;
+    expect(reducer(initState, actions.checkTodo({ id: 0, completed: true, }))).toEqual(expectObject);
   });
 
 });
