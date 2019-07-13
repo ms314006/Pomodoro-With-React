@@ -36,7 +36,7 @@ add_todo_block {
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 1000px) {
+@media all and (min-width: 0px) and (max-width: 1000px) {
     .add_todo_input_block {
         width: 450px;
         margin: 50px;
