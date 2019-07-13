@@ -1,3 +1,39 @@
 .menu_block {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: #003164;
+
+    .menu_list_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .menu_icon {
+            color: #FFFFFF;
+            font-size: 24px;
+            text-decoration:none;
+        }
+        .menu_icon:visited {
+            color: #FFFFFF;
+        }
+        .menu_icon:hover {
+            color: #FFFFFF;
+        }
+        .menu_icon:active {
+            color: #FFFFFF;
+        }
+    }
+
+    .logo_block {
+        transform:rotate(90deg);
+        position: relative;
+        .logo {
+            position: absolute;
+            top: 50%;
+            font-family: 'Roboto', serif;
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+    }
 }
