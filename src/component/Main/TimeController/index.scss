@@ -51,7 +51,7 @@
 }
 
 
-@media screen and (min-width: 900px) and (max-width: 1050px) {
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
     .outside_circle {
         height: 350px;
         width: 350px;
@@ -63,7 +63,7 @@
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 900px) {
+@media screen and (min-width: 0px) and (max-width: 1000px) {
     .timeController_block {
         display: flex;
         justify-content: center;
