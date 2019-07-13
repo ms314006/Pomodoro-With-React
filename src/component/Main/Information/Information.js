@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AddTodoInput from '../../AddTodoInput';
 import Time from '../../Time';
 import Circle from '../../Circle';
@@ -30,7 +31,18 @@ const Information = () => (
       </div>
       <Time />
     </div>
-    <TodoList />
+    <div>
+      <TodoList listCount={3} />
+      <div className={styles.more_link}>
+        <Link
+          className={styles.clean_link_style}
+          data-testid="todolist_link"
+          to="/todolist"
+        >
+          MORE
+        </Link>
+      </div>
+    </div>
   </div>
 );
 

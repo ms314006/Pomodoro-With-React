@@ -28,4 +28,25 @@
             }
         }
     }
+
+    .more_link {
+        margin-top: 8px;
+        font-family: 'Roboto', serif;
+        font-weight: bold;
+        text-align: right;
+        color: #FF4384;
+
+        .clean_link_style {
+            text-decoration:none;
+        }
+        .clean_link_style:visited {
+            color: #FF4384;
+        }
+        .clean_link_style:hover {
+            color: #FF4384;
+        }
+        .clean_link_style:active {
+            color: #FF4384;
+        }
+    }
 }
