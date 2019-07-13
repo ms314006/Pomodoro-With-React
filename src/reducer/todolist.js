@@ -9,6 +9,30 @@ const initState = {
       name: 'TodoList 1',
       completed: false,
       spendSeconds: 0,
+    },
+    {
+      id: 1,
+      name: 'TodoList 2',
+      completed: false,
+      spendSeconds: 0,
+    },
+    {
+      id: 2,
+      name: 'TodoList 3',
+      completed: false,
+      spendSeconds: 0,
+    },
+    {
+      id: 3,
+      name: 'TodoList 4',
+      completed: false,
+      spendSeconds: 0,
+    },
+    {
+      id: 4,
+      name: 'TodoList 5',
+      completed: false,
+      spendSeconds: 0,
     }
   ],
 };

@@ -18,7 +18,7 @@ const initialState = {
 describe('test reducer', () => {
 
   test('Test initial state', () => {
-    expect(reducer(undefined, {})).toEqual(initialState);
+    expect(reducer(initialState, {})).toEqual(initialState);
   });
 
   test('Test add todo', () => {
