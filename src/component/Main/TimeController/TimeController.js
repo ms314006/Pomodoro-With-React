@@ -9,20 +9,24 @@ const TimeController = (props) => {
       className={styles.timeController_block}
       data-testid="timeController_block"
     >
-      <Circle style={{
-        border: '4px solid #FF4384',
-        position: 'absolute',
-        height: '540px',
-        width: '540px',
-      }}
-      />
-      <Circle style={{
-        backgroundColor: '#FF4384',
-        position: 'absolute',
-        height: '500px',
-        width: '500px',
-      }}
-      />
+      <div className={styles.outside_circle}>
+        <Circle style={{
+          width: '100%',
+          height: '100%',
+          border: '4px solid #FF4384',
+          boxSizing: 'border-box',
+        }}
+        />
+      </div>
+      <div className={styles.inside_circle}>
+        <Circle style={{
+          backgroundColor: '#FF4384',
+          height: '100%',
+          width: '100%',
+          border: 'none',
+        }}
+        />
+      </div>
       <div className={styles.controller_button_block}>
         <i
           className={`fas fa-play-circle ${styles.start_button}`}

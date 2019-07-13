@@ -5,17 +5,24 @@
     background: linear-gradient(to left, #003164 50%, #FFEDF7 50%);
 }
 
-circle {
-    border: 4px solid #FF4384;
-    border-radius: 50%;
-}
-
 .controller_button_block {
     position: absolute;
     display: flex;
     flex-wrap: row;
     align-items: flex-end;
     z-index: 1;
+}
+
+.outside_circle {
+    height: 540px;
+    width: 540px;
+    position: absolute;
+}
+
+.inside_circle {
+    height: 500px;
+    width: 500px;
+    position: absolute;
 }
 
 .start_button {
@@ -29,4 +36,48 @@ circle {
     height: 12px;
     width: 12px;
     border: none;
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1250px) {
+    .outside_circle {
+        height: 440px;
+        width: 440px;
+    }
+    
+    .inside_circle {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+    .outside_circle {
+        height: 350px;
+        width: 350px;
+    }
+    
+    .inside_circle {
+        height: 310px;
+        width: 310px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .timeController_block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, #003164 50%, #FFEDF7 50%);
+    }
+
+    .outside_circle {
+        height: 440px;
+        width: 440px;
+    }
+    
+    .inside_circle {
+        height: 400px;
+        width: 400px;
+    }
 }

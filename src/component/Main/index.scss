@@ -5,3 +5,13 @@
   width: 100%;
   background-color: #FFEDF7;
 }
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .main_block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 500px 100px;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -34,3 +34,15 @@ add_todo_block {
 .add_todo_icon {
     margin-left: -30px;
 }
+
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .add_todo_input_block {
+        width: 450px;
+        margin: 50px;
+    }
+
+    .add_todo_input {
+        width: 100%;
+    }
+}

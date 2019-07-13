@@ -1,3 +1,9 @@
 .todoList_block {
     
 }
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .todoList_block {
+        width: 450px;
+    }
+}

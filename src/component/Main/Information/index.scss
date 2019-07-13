@@ -50,3 +50,11 @@
         }
     }
 }
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .information_block {
+        padding: 0px;
+        margin: 0px;
+        align-items: center;
+    }
+}
