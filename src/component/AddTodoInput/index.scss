@@ -28,7 +28,7 @@ add_todo_block {
     border: none;
     background-color: #ffffff;
     height: 56px;
-    width: 445px;
+    width: 100%;
 }
 
 .add_todo_icon {
@@ -39,7 +39,7 @@ add_todo_block {
 @media all and (min-width: 0px) and (max-width: 1000px) {
     .add_todo_input_block {
         width: 450px;
-        margin: 50px;
+        margin: 20px 0px;
     }
 
     .add_todo_input {
