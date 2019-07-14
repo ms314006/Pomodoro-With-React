@@ -1,0 +1,17 @@
+.todoListOverview_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row_height {
+    margin-top: 50px;
+}
+
+@media all and (min-width: 0px) and (max-width: 1000px) {
+    .todoListOverview_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
