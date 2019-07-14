@@ -45,6 +45,6 @@ describe('<Information />', () => {
 
     expect(history.location.pathname).toBe('/');
     fireEvent.click(getByTestId('todolist_link'));
-    expect(history.location.pathname).toBe('/todolist');
+    expect(history.location.pathname).toBe('/todolist/overview');
   });
 });
