@@ -1,0 +1,128 @@
+.sidebarMenu_block {
+    padding-top: 50px;
+    background-color: #003164;
+    justify-content: space-between;
+
+    .menu_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+    
+        .menu_item {
+            margin-bottom: 30px;
+            height: 50px;
+            width: 65%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+      
+            .menu_name {
+                font-family: 'Roboto', serif;
+                font-size: 36px;
+                font-weight: bold;
+                margin-left: 30px;
+            }
+    
+            .item_link {
+                text-decoration:none;
+            }
+            .item_link:visited {
+                color: #3B597F;
+            }
+            .item_link:hover {
+                color: #FF4384;
+            }
+            .item_link:active {
+                color: #FF4384;
+            }
+        }
+    }
+
+    .littleTimeControl_block {
+        height: 58%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        .littleTimeControl_main_circle {
+            position: absolute;
+            bottom: 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .littleTimeControl_button {
+            position: absolute;
+            bottom: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .littleTimeControl_button_icon {
+                margin-left: 5px;
+                position: absolute;
+                font-size: 70px;
+                color: #FFFFFF;
+                z-index: 10;
+            }
+        }
+
+        .littleTimeControl_text {
+            position: absolute;
+            bottom: 35px;
+            font-family: 'Roboto', serif;
+            font-weight: bold;
+            text-align: center;
+
+            .littleTimeControl_time_text {
+                color: #FF4384;
+                font-size: 64px;
+                margin-bottom: 10px;
+            }
+
+            .littleTimeControl_todoName_text {
+                color: #003164;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 0px) and (max-width: 1000px) {
+    .sidebarMenu_block {
+        .menu_block {
+            .menu_item {
+                margin-bottom: 0px;
+                width: 65%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    
+        .littleTimeControl_block {
+            height: 270px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+    
+            .littleTimeControl_main_circle {
+                position: absolute;
+                top: 50px;
+                display: flex;
+                justify-content: center;
+            }
+    
+            .littleTimeControl_button {
+                position: absolute;
+                bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
