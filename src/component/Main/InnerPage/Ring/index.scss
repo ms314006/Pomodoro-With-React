@@ -1,0 +1,28 @@
+.ring_content_block {
+    width: 390px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ringItem_block {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.row_height {
+    margin-top: 50px;
+}
+
+@media all and (min-width: 0px) and (max-width: 1000px) {
+    .ring_content_block {
+        width: 450px;
+        justify-content: center;
+    }
+}
