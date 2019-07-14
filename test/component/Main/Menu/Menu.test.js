@@ -31,15 +31,28 @@ describe('<Menu />', () => {
         <Menu />
       </Router>
     );
-    
+
     expect(history.location.pathname).toBe('/');
     fireEvent.click(getByTestId('menu_icon_todlist'));
-    expect(history.location.pathname).toBe('/todolist');
+    expect(history.location.pathname).toBe('/todolist/overview');
 
     fireEvent.click(getByTestId('menu_icon_chart'));
     expect(history.location.pathname).toBe('/todolist/chart');
 
     fireEvent.click(getByTestId('menu_icon_ring'));
     expect(history.location.pathname).toBe('/todolist/ring');
+  });
+
+  test('回首頁的 Icon render 的時機只能在首頁以外', () => {
+    const route = '/todolist';
+    const history = createMemoryHistory({ initialEntries: [route], });
+    const { getByTestId, } = render(
+      <Router history={history}>
+        <Menu match={{ path: '/todolist', }} />
+      </Router>
+    );
+
+    fireEvent.click(getByTestId('menu_icon_close'));
+    expect(history.location.pathname).toBe('/');
   });
 });
