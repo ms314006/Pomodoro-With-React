@@ -37,7 +37,7 @@ const Information = () => (
         <Link
           className={styles.clean_link_style}
           data-testid="todolist_link"
-          to="/todolist"
+          to="/todolist/overview"
         >
           MORE
         </Link>
