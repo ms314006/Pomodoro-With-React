@@ -45,9 +45,4 @@ describe('<TodoList />', () => {
     const { getAllByTestId, } = renderWithRedux(<TodoList />, { initialState, });
     expect(getAllByTestId('todo_block').length).toBe(2);
   });
-
-  test('確認 listCount 是否有起到效用', () => {
-    const { getAllByTestId, } = renderWithRedux(<TodoList listCount={1} />, { initialState, });
-    expect(getAllByTestId('todo_block').length).toBe(1);
-  });
 });
