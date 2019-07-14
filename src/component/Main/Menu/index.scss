@@ -2,11 +2,13 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background-color: #003164;
+    padding-top: 50px;
+    overflow: hidden;
 
     .menu_list_block {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
         .menu_icon {
