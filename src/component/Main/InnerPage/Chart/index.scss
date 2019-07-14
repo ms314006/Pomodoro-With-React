@@ -1,0 +1,32 @@
+.chart_block {
+    font-family: 'Roboto', serif;
+    font-weight: bold;
+    .statistics_data {
+        display: flex;
+        justify-content: space-between;
+        .statistics_type {
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        .statistics_content {
+            margin: 10px 0px;
+            .statistics_result {
+                margin-right: 10px;
+                font-size: 64px;
+                color: #FF4384;
+            }
+    
+            .statistics_unit {
+                color: #3B597F;
+            }
+        }
+    }
+
+    .statistics_chart {
+        padding: 0px;
+    }
+}
+
+.row_height {
+    margin-top: 45px;
+}
